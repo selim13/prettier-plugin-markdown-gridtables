@@ -1,0 +1,39 @@
+{
+  "name": "prettier-plugin-markdown-gridtables",
+  "version": "0.1.0",
+  "description": "Format Markdown grid tables and convert wide pipe tables with Prettier",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./index.js",
+  "main": "./index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "scripts": {
+    "format": "prettier --write index.js test/*.js eslint.config.js package.json .prettierrc.json .github/workflows/*.yml",
+    "format:check": "prettier --check index.js test/*.js eslint.config.js package.json .prettierrc.json .github/workflows/*.yml",
+    "lint": "eslint .",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@adobe/mdast-util-gridtables": "^4.0.19",
+    "@adobe/micromark-extension-gridtables": "^2.0.4",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-gfm": "^3.1.0",
+    "mdast-util-to-markdown": "^2.1.2",
+    "string-width": "^7.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-packagejson": "^3.0.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
